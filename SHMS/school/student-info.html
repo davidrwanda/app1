@@ -1,0 +1,642 @@
+<html>
+    <head>
+        <title>SHMIS | INFO</title>
+        <style>
+        
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 85%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 2px;
+        margin: 60px;
+        margin-left: 80px;
+        margin-right: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+        color: cadetblue;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5px auto; /* 15% from the top and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        text-align: center;
+    }
+    
+    /* The Close Button */
+    .close {
+        /* Position it in the top right corner outside of the modal */
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    /* Close button on hover */
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)}
+        to {-webkit-transform: scale(1)}
+    }
+    
+    @keyframes animatezoom {
+        from {transform: scale(0)}
+        to {transform: scale(1)}
+    }
+    .radio-group1{
+       
+        text-align: center;
+        font-size: larger;
+    }
+    p{
+        font-style: bold;
+        font-size: large;
+        color:darkcyan;
+    }
+    label{
+        font-style: bold;
+        font-size: large;
+        color:darkcyan;
+    }
+    dt{
+        font-style: bold;
+        font-size: large;
+        color:darkcyan; 
+    }
+        </style>
+        <link href="../css/animate.css" rel="stylesheet">
+        
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="../css/hover.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link href="../css/animsition.min.css" rel="stylesheet">
+        <link href="../css/loader.css" rel="stylesheet">
+        <script src="../css/WOW/dist/wow.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/animsition.min.js"></script>
+        <script src="../scripts/js.js"></script>
+    </head>
+    <body>
+        <div class="body">
+                
+    
+            <div class="col-12">
+                <div class="leftnav-info col-2">
+                    <div class="lnav">
+                            <div class="col-2"><img src="../image/logo.PNG" alt=""></div>
+                    </div>
+                        
+                </div>
+                <div class="bc-info">
+            
+            <nav class="col-8 navigation">
+               <nav>
+                    <a class="hvr-underline-from-center" href="index.html">home</a>
+                    <a class=" hvr-underline-from-center" href="#">services</a>
+                    <a class=" hvr-underline-from-center" href="#">contact</a>
+                    
+                    
+                    <a class=" hvr-underline-from-center" href="#">logout</a>
+                    
+                    
+                </nav>
+             
+                <br>
+                <br>
+                <br>
+                <br>
+               
+                    </div>
+                    <table id="table" width="500px"  class="col-12 table">
+                        <tr class="th"><th>IDNO</th><th>FNAME</th>
+                            <th>SEX</th><th>BDATE</th><th>DISTRICT</th><th>PHONE</th>
+                            <th class="collapse">LASTNAME</th><th class="collapse">PHONE</th>
+                            <th class="collapse">M.STATUS</th><th class="collapse jq">PHOTO</th>
+                            <th class="collapse">FNAME</th><th class="collapse">FPHONE</th>
+                            <th class="collapse">M.NAME</th><th class="collapse">M.PHONE</th>
+                            <th class="collapse">FEMAIL</th><th class="collapse">M.EMAIL</th>
+                            <th class="collapse">NO1</th><th class="collapse">NO2</th>
+                            <th class="collapse">NO3</th><th class="collapse">NO4</th>
+                            <th class="collapse">SECTOR</th><th class="collapse">CELL</th>
+                            <th class="collapse">COMMENT</th>
+                        </tr>
+                        <tr class="td">
+                            <td id="td">IDNO</td>
+                            <td id="td">FNAME</td>
+                            <td id="td">SEX</td>
+                            <td id="td">BDATE</td>
+                            <td id="td">GASABO</td>
+                            <td id="td">PHONE</td>
+                            <td id="td" class="collapse" >LASTNAME</td>
+                            <td id="td" class="collapse" >EMAIL</td>
+                            <td id="td" class="collapse">M.STATUS</td>
+                            <td id="td" class="collapse">PHOTO</td>
+                            <td id="td" class="collapse">FATHER</td>
+                            <td id="td" class="collapse">F.PHONE</td>
+                            <td id="td" class="collapse">M.NAME</td>
+                            <td id="td" class="collapse">M.PHONE</td>
+                            <td id="td" class="collapse">FEMAIL</td>
+                            <td id="td" class="collapse">M.EMAIL</td>
+                            <td id="td" class="collapse">NO1</td>
+                            <td id="td" class="collapse">NO2</td>
+                            <td id="td" class="collapse">NO3</td>
+                            <td id="td" class="collapse">NO4</td>
+                            <td id="td" class="collapse">KICUKIRO</td>
+                            <td id="td" class="collapse">CELL</td>
+                            <td id="td" class="collapse">COMMENT</td>
+                            <td id="td" class="collapse">COMMENT2</td>
+                        </tr>
+                        
+                        <script>
+                        var table=document.getElementById('table'),rIndex;
+                        for(var i = 0; i <= table.rows.length; i++){
+                           
+                            table.rows[i].onclick = function(){
+                                document.getElementById('id01').style.display='block';
+                                
+                                rIndex = this.rowIndex;
+                                document.getElementById('photo').value = this.cells[9].innerHTML;
+                                document.getElementsById('fname').value = this.cells[1].innerHTML;
+                                document.getElementById('lname').value = this.cells[6].innerHTML;
+                                document.getElementById('phone').value = this.cells[5].innerHTML;
+                                document.getElementById('email').value = this.cells[7].innerHTML;
+                                document.getElementById('status').value = this.cells[8].innerHTML;
+                                document.getElementById('bdate').value = this.cells[3].innerHTML;
+                                document.getElementById('sex').value = this.cells[2].innerHTML;
+                                document.getElementById('f_name').value = this.cells[10].innerHTML;
+                                document.getElementById('f_phone').value = this.cells[11].innerHTML;
+                                document.getElementById('mname').value = this.cells[12].innerHTML;
+                                document.getElementById('mphone').value = this.cells[13].innerHTML;
+                                document.getElementById('femail').value = this.cells[14].innerHTML;
+                                document.getElementById('memail').value = this.cells[15].innerHTML;
+                                document.getElementById('no1').value = this.cells[16].innerHTML;
+                                document.getElementById('no2').value = this.cells[17].innerHTML;
+                                document.getElementById('no3').value = this.cells[18].innerHTML;
+                                document.getElementById('no4').value = this.cells[19].innerHTML;
+                                document.getElementById('district').value = this.cells[4].innerHTML;
+                                document.getElementById('sector').value = this.cells[20].innerHTML;
+                                document.getElementById('cell').value = this.cells[21].innerHTML;
+                                document.getElementById('comment').value = this.cells[22].innerHTML;
+                                document.getElementById('comment2').value = this.cells[23].innerHTML;
+                                document.getElementsById('idno').value = this.cells[0].innerHTML;
+                                
+                                
+                                
+                               
+
+                                
+                            }
+                        }
+                        </script>
+                    </table>
+                    <table class="none-dispayed col-12">
+                            
+                        
+            <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+                  
+                    <!-- Modal Content -->
+                    
+                          <div class="col-12">
+                                  <div class=" reg1 identification col-4">
+                       <form class="modal-content animate iform col-12" action="#">
+                       <h1 id="id">IDENTIFICATION</h1>
+                       <br>
+                       <div class="col-6">
+                       <label for="fname">firstname</label>
+                       
+                       <label for="lname">lastname</label>
+                       <input id="lname" class="input-group" type="text" name="lname"><br>
+                       <label for="phone">phone</label>
+                       <input id="phone" class="input-group" type="text" name="phone"><br>
+                       <label for="email">email</label>
+                       <input id="email" class="input-group" type="text" name="phone"><br>
+                       <label for="idno">IdNo</label>
+                       <input id="idno" class="input-group" type="text" name="idno"><br>
+                       <label for="status">martal status</label>
+                       <input  id="status" class="input-group" type="text" name="status"><br>
+                       
+                       
+                       
+                       </div>
+                       <div class="col-6">
+
+                           <label for="photo">photo</label>
+                           <input id="photo" class="input-group" type="text" name="image"><br>
+                           
+                           <label  for="birthdate">birthdate</label>
+                           <input id="bdate" class="input-group" type="date" name="bdate"><br>
+                           <label  for="sex">sex</label>
+                           <input id="sex" class="input-group" type="text" name="sex"> <br>
+                           <label for="district">district</label>
+                           <input id="district" class="input-group" type="text" name="district"><br>
+                           <label for="sector">sector</label>
+                           <input  id="sector" class="input-group sector" type="text" name="sector" value="0"><br>
+                           <label for="cell">cell</label>
+                           <input  id="cell" class="input-group" type="text" name="cell"><br>
+                        
+                       </div>
+                       </form>
+                                  </div> 
+                                  
+                                  <div class="reg1 parent col-4">
+                                       
+                                   <form class="pform col-12" action="#">
+                                       <h1 id="par">PARENT</h1>
+                                       <div class="col-6">
+                                           <dl>
+                                               <dd  class="input-group"><p>fater-name:</p><input id="f_name" type="text" name="fathername"></dd>
+                                               <dd  class="input-group"><p>father-phone:</p><input id="f_phone" type="text" name="fatherphone"></dd>
+                                               <dd  class="input-group"><p>f-email:</p><input id="femail" type="text" name="fatheremail"></dd>
+                                           </dl>
+                                       
+                                       
+                                       </div>
+                                       <div class="col-6">
+                                               <dl>
+                                                       <dd  class="input-group"><p>m-name:</p><input id="mname" type="text" name="mathername"></dd>
+                                                       <dd  class="input-group"><p>m-phone:</p><input id="mphone" type="text" name="motherphone"></dd>
+                                                       <dd  class="input-group"><p>m-email:</p><input id="memail" type="text" name="motheremail"></dd>
+                                                   </dl>    
+                               </div> 
+                           </form>
+                       </div>
+                               <div class="reg1 exam col-4">
+                                   <form class="eform" action="#">
+                                   <h1 id="exam">exam</h1>
+                       <div class="col-4">
+                       <h1>exmNo</h1>
+                       <dl>
+                           <dt>NO1</dt>
+                           <dd><select name="eno1" id="eno1">
+                               <option value="HIV/AIDS">HIV/AIDS</option>
+                               <option value="DIABETES">DIABETES</option>
+                               <option value="MALARIA">MALARIA</option>
+                               <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                           </select></dd>
+                       </dl>
+                       <dl>
+                               <dt>NO2</dt>
+                               <dd><select name="eno1" id="eno1">
+                                   <option value="HIV/AIDS">HIV/AIDS</option>
+                                   <option value="DIABETES">DIABETES</option>
+                                   <option value="MALARIA">MALARIA</option>
+                                   <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                               </select></dd>
+                           </dl>
+                           <dl>
+                                   <dt>NO3</dt>
+                                   <dd><select name="eno1" id="eno1">
+                                       <option value="HIV/AIDS">HIV/AIDS</option>
+                                       <option value="DIABETES">DIABETES</option>
+                                       <option value="MALARIA">MALARIA</option>
+                                       <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                                   </select></dd>
+                               </dl>
+                               <dl>
+                                       <dt>NO4</dt>
+                                       <dd><select name="eno1" id="eno1">
+                                           <option value="HIV/AIDS">HIV/AIDS</option>
+                                           <option value="DIABETES">DIABETES</option>
+                                           <option value="MALARIA">MALARIA</option>
+                                           <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                                       </select></dd>
+                                   </dl>
+                       </div>
+                       <div class="col-4">
+                               <h1>P/N</h1>
+                               <dl>
+                                   <dt>result</dt>
+                                   <dd><select name="r1" id="r1 no1">
+                                       <option value="">------</option>
+                                       <option value="POSITIVE">POSITIVE</option>
+                                       <option value="NEGATIVE">NEGATIVE</option>
+                                       
+                                   </select></dd>
+                               </dl>
+                               <dl>
+                                       <dt>result</dt>
+                                       <dd><select name="r1" id="r1 no2">
+                                           <option value="">------</option>
+                                           <option value="POSITIVE">POSITIVE</option>
+                                           <option value="NEGATIVE">NEGATIVE</option>
+                                           
+                                       </select></dd>
+                                   </dl>
+                                   <dl>
+                                           <dt>result</dt>
+                                           <dd><select name="r1" id="r1 no3">
+                                               <option value="">------</option>
+                                               <option value="POSITIVE">POSITIVE</option>
+                                               <option value="NEGATIVE">NEGATIVE</option>
+                                               
+                                           </select></dd>
+                                       </dl>
+                                       <dl>
+                                               <dt>result</dt>
+                                               <dd><select name="r1" id="r1 no4">
+                                                   <option value="">------</option>
+                                                   <option value="POSITIVE">POSITIVE</option>
+                                                   <option value="NEGATIVE">NEGATIVE</option>
+                                                   
+                                               </select></dd>
+                                           </dl>
+                       </div>
+                       <div class="col-4">
+                               <h1>COMMENT</h1>
+                               <dl>
+                                   <dt>comment1</dt>
+                                   <dd>
+                                       <textarea id="comment" name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                                   </dd>
+                               </dl>
+                               <dl>
+                                       <dt>comment2</dt>
+                                       <dd>
+                                           <textarea id="comment2" name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                                       </dd>
+                                   </dl>
+                                   <dl>
+                                           
+                                   
+                       </div>
+                       
+                       </form>
+                       
+                       </div>
+                       
+                               </div> 
+                       
+                       <h1 id="submit"><button name="submit">UPDATE</button>-<button name="submit">DELETE</button>-<button onclick="document.getElementById('id02').style.display='block'" name="submit">NEW</button></h1>-<button type="button" 
+                       onclick="document.getElementById('id01').style.display='none'" 
+                       class="cancelbtn">Cancel</button>
+                  </div>
+                    </table>
+                </div>
+                
+            <!-- The Modal -->
+            <div id="id02" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+                  
+                    <!-- Modal Content -->
+                    
+                          <div class="col-12">
+                                  <div class=" reg identification col-4">
+                       <form class="modal-content animate iform col-12" action="#">
+                       <h1 id="id">IDENTIFICATION</h1>
+                       <div class="col-6">
+                       <label for="fname">firstname</label>
+                       <input class="input-group" type="text" name="fname">
+                       <label for="lname">lastname</label>
+                       <input class="input-group" type="text" name="lname">
+                       <label for="phone">phone</label>
+                       <input class="input-group" type="text" name="phone">
+                       <label for="email">email</label>
+                       <input class="input-group" type="email" name="email">
+                       <label for="status">martal status</label>
+                       <input class="input-group" type="text" name="status">
+                       <p style="text-align:center">LOCATION:</p> 
+                       <br>
+                       DISTRICT:  <SElect>
+                       
+                           <OPtion>NYARUGENGE</OPtion>
+                           <OPtion>KICUKIRO</OPtion>
+                           <OPtion>GASABO</OPtion>
+                           <OPtion>NYARUGENGE</OPtion>
+                       </SElect><br>
+                       SECTOR: <br><SElect>
+                           <OPtion>NYARUGENGE</OPtion>
+                           <OPtion>KICUKIRO</OPtion>
+                           <OPtion>GASABO</OPtion>
+                           <OPtion>NYARUGENGE</OPtion>
+                       </SElect>
+                       <br>
+                       CELL: <br>
+                       <SElect>
+                           <OPtion>NYARUGENGE</OPtion>
+                           <OPtion>KICUKIRO</OPtion>
+                           <OPtion>GASABO</OPtion>
+                           <OPtion>NYARUGENGE</OPtion>
+                       </SElect>
+                       
+                       </div>
+                       <div class="col-6">
+                           <label for="photo">photo</label>
+                           <input class="input-group" type="text" name="image">
+                           <label for="idno">IdNo</label>
+                           <input class="input-group" type="text" name="idno">
+                           <label for="birthdate">birthdate</label>
+                           <input class="input-group" type="date" name="bdate">
+                           <label for="sex">sex</label>
+                           <input class="input-group" type="text" name="sex"> 
+                           <label for="assurance">martal status</label>
+                       <input class="input-group" type="text" name="assurance">
+                        
+                       </div>
+                       </form>
+                                  </div> 
+                                  
+                                  <div class="reg parent col-4">
+                                       
+                                   <form class="pform col-12" action="#">
+                                       <h1 id="par">PARENT</h1>
+                                       <div class="col-6">
+                                           <dl>
+                                               <dd  class="input-group"><p>name:</p><input type="text" name="fathername"></dd>
+                                               <dd  class="input-group"><p>phone:</p><input type="text" name="fatherphone"></dd>
+                                               <dd  class="input-group"><p>email:</p><input type="text" name="fatheremail"></dd>
+                                           </dl>
+                                       
+                                       
+                                       </div>
+                                       <div class="col-6">
+                                               <dl>
+                                                       <dd  class="input-group"><p>name:</p><input type="text" name="mathername"></dd>
+                                                       <dd  class="input-group"><p>phone:</p><input type="text" name="motherphone"></dd>
+                                                       <dd  class="input-group"><p>email:</p><input type="text" name="motheremail"></dd>
+                                                   </dl>    
+                               </div> 
+                           </form>
+                       </div>
+                               <div class="reg exam col-4">
+                                   <form class="eform" action="#">
+                                   <h1 id="exam">exam</h1>
+                       <div class="col-4">
+                       <h1>exmNo</h1>
+                       <dl>
+                           <dt>NO1</dt>
+                           <dd><select name="eno1" id="eno1">
+                               <option value="HIV/AIDS">HIV/AIDS</option>
+                               <option value="DIABETES">DIABETES</option>
+                               <option value="MALARIA">MALARIA</option>
+                               <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                           </select></dd>
+                       </dl>
+                       <dl>
+                               <dt>NO2</dt>
+                               <dd><select name="eno1" id="eno1">
+                                   <option value="HIV/AIDS">HIV/AIDS</option>
+                                   <option value="DIABETES">DIABETES</option>
+                                   <option value="MALARIA">MALARIA</option>
+                                   <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                               </select></dd>
+                           </dl>
+                           <dl>
+                                   <dt>NO3</dt>
+                                   <dd><select name="eno1" id="eno1">
+                                       <option value="HIV/AIDS">HIV/AIDS</option>
+                                       <option value="DIABETES">DIABETES</option>
+                                       <option value="MALARIA">MALARIA</option>
+                                       <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                                   </select></dd>
+                               </dl>
+                               <dl>
+                                       <dt>NO4</dt>
+                                       <dd><select name="eno1" id="eno1">
+                                           <option value="HIV/AIDS">HIV/AIDS</option>
+                                           <option value="DIABETES">DIABETES</option>
+                                           <option value="MALARIA">MALARIA</option>
+                                           <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                                       </select></dd>
+                                   </dl>
+                       </div>
+                       <div class="col-4">
+                               <h1>P/N</h1>
+                               <dl>
+                                   <dt>result</dt>
+                                   <dd><select name="r1" id="r1">
+                                       <option value="">------</option>
+                                       <option value="POSITIVE">POSITIVE</option>
+                                       <option value="NEGATIVE">NEGATIVE</option>
+                                       
+                                   </select></dd>
+                               </dl>
+                               <dl>
+                                       <dt>result</dt>
+                                       <dd><select name="r1" id="r1">
+                                           <option value="">------</option>
+                                           <option value="POSITIVE">POSITIVE</option>
+                                           <option value="NEGATIVE">NEGATIVE</option>
+                                           
+                                       </select></dd>
+                                   </dl>
+                                   <dl>
+                                           <dt>result</dt>
+                                           <dd><select name="r1" id="r1">
+                                               <option value="">------</option>
+                                               <option value="POSITIVE">POSITIVE</option>
+                                               <option value="NEGATIVE">NEGATIVE</option>
+                                               
+                                           </select></dd>
+                                       </dl>
+                                       <dl>
+                                               <dt>result</dt>
+                                               <dd><select name="r1" id="r1">
+                                                   <option value="">------</option>
+                                                   <option value="POSITIVE">POSITIVE</option>
+                                                   <option value="NEGATIVE">NEGATIVE</option>
+                                                   
+                                               </select></dd>
+                                           </dl>
+                       </div>
+                       <div class="col-4">
+                               <h1>COMMENT</h1>
+                               <dl>
+                                   <dt>comment1</dt>
+                                   <dd>
+                                       <textarea name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                                   </dd>
+                               </dl>
+                               <dl>
+                                       <dt>comment2</dt>
+                                       <dd>
+                                           <textarea name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                                       </dd>
+                                   </dl>
+                                   <dl>
+                                           
+                                   
+                       </div>
+                       </form>
+                       </div>
+                               </div> 
+                       
+                       <h1 id="submit"><button name="submit">RECORD</button>-<button type="button" 
+                       onclick="document.getElementById('id02').style.display='none'" 
+                       class="cancelbtn">Cancel</button></h1>
+                  </div>
+                 <div class="col-12">
+                        <div class="sti col-2"><img src="" alt="ident"></div>
+                        
+                        <div class="stable sti col-8" >
+                            <table width="90%" align="center" >
+                                <h1>HABUMUGISHA YVE</h1>
+                                <tr><td>IDENTIFICATION</td><td></td></tr>
+                                <tr><th><label for="">Idno:</label></th><td>
+                                    
+                                    <input class="idno" id="idno"  class="input-group" type="text" name="idno"></td></tr>
+                                <tr><th><label for="">firstname:</label></th><td><input id="fname" class="input-group" type="text" name="fname"></td></tr>
+                                <tr><th><label for="">lastname:</label></th><td><input id="lname" class="input-group" type="text" name="lname"></td></tr>
+                                <tr><th><label for="">phone:</label></th><td><input id="phone" class="input-group" type="text" name="phone"></td></tr>
+                                <tr><th><label for="">email:</label></th><td><input id="email" class="input-group" type="text" name="email"></td></tr>
+                               
+                                <tr><th><label for="">m.status:</label></th><td><input id="status" class="input-group" type="text" name="status"></td></tr>
+                                <tr><th><label for="">sex:</label></th><td><input id="sex" class="input-group" type="text" name="sex"></td></tr>
+                                <tr><th><label for="">birthdate:</label></th><td><input id="bdate" class="input-group" type="text" name="bdate"></td></tr>
+                                <tr><th><label for="">district:</label></th><td><input id="district" class="input-group" type="text" name="district"></td></tr>
+                                <tr><th><label for="">sector:</label></th><td><input id="sector" class="input-group" type="text" name="sector"></td></tr>
+                                <tr><th><label for="">cell:</label></th><td><input id="cell" class="input-group" type="text" name="cell"></td></tr>
+                                <tr><td>PARENT</td><td></td></tr>
+                                <tr><th><label for="">fater-name:</label></th><td><input id="f_name" class="input-group" type="f_name" ></td></tr>
+                                <tr><th><label for="">fatherphone:</label></th><td><input id="f_phone" class="input-group" type="f_phone" ></td></tr>
+                                <tr><th><label for="">fathe remail:</label></th><td><input id="femail" class="input-group" type="femail" ></td></tr>
+                                <tr><th><label for="">mather name:</label></th><td><input id="mname" class="input-group" type="mname" ></td></tr>
+                                <tr><th><label for="">mother phone:</label></th><td><input id="mphone" class="input-group" type="mphone" ></td></tr>
+                                <tr><th><label for="">mother email:</label></th><td><input id="memail" class="input-group" type="memail" ></td></tr>
+                                <tr><td>exam</td><td></td></tr>
+                                <tr><th><label for="">exam/<p id="eno1"></p></label>:</th><td><input id="no1" class="input-group" type="text" name="no1"></td></tr>
+                                <tr><th><label for="">exam/<p id="eno2"></p></label>:</th><td><input id="no2" class="input-group" type="text" name="no2"></td></tr>
+                                <tr><th><label for="">exam/<p id="eno3"></p></label>:</th><td><input id="no3" class="input-group" type="text" name="no3"></td></tr>
+                                <tr><th><label for="">exam/<p id="eno4"></p></label>:</th><td><input id="no4" class="input-group" type="text" name="no4"></td></tr>
+                              <tr><th><label for="">comment</label></th>:<td><input id="comment" class="input-group" type="text" name="comment"></td></tr>
+                              
+                          
+                            </table>
+                            
+                        </div>
+                      </div> 
+                     
+                      
+                      <script>
+                      
+                      </script>
+    </body>
+</html>

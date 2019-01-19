@@ -1,0 +1,776 @@
+<html>
+    <head>
+        <title>school | SHMIS</title>
+        <style>
+                .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 85%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+        margin: 60px;
+        margin-left: 80px;
+        margin-right: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    .modal1 {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 40%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+        margin: 60px;
+        margin-left: 350px;
+        margin-right: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5px auto; /* 15% from the top and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        text-align: center;
+    }
+    
+    /* The Close Button */
+    .close {
+        /* Position it in the top right corner outside of the modal */
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    /* Close button on hover */
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)}
+        to {-webkit-transform: scale(1)}
+    }
+    
+    @keyframes animatezoom {
+        from {transform: scale(0)}
+        to {transform: scale(1)}
+    }
+    .radio-group1{
+       
+        text-align: center;
+        font-size: larger;
+    }
+   
+                </style>
+        <link href="../css/animate.css" rel="stylesheet">
+        <link href="../css/hover.css" rel="stylesheet">
+        
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link href="../css/animsition.min.css" rel="stylesheet">
+        <link href="../css/loader.css" rel="stylesheet">
+        <script src="../css/WOW/dist/wow.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/animsition.min.js"></script>
+        <script src="../scripts/js.js"></script>
+    </head>
+    <body>
+         
+   
+            <!-- The Modal -->
+            <div id="id01" class="modal">
+              <span onclick="document.getElementById('id01').style.display='none'"
+            class="close" title="Close Modal">&times;</span>
+            
+              <!-- Modal Content -->
+              
+                    <div class="col-12">
+                            <div class=" reg identification col-4">
+                 <form class="modal-content animate iform col-12" action="#">
+                 <h1 id="id">IDENTIFICATION</h1>
+                 <div class="col-6">
+                 <label for="fname">firstname</label>
+                 <input class="input-group" type="text" name="fname" required>
+                 <label for="lname">lastname</label>
+                 <input class="input-group" type="text" name="lname">
+                 <label for="phone">phone</label>
+                 <input class="input-group" type="text" name="phone">
+                 <label for="email">email</label>
+                 <input class="input-group" type="email" name="email">
+                 <label for="status">martal status</label>
+                 <input class="input-group" type="text" name="status">
+                 <p style="text-align:center">LOCATION:</p> 
+                 <br>
+                 DISTRICT:  <SElect>
+                 
+                     <OPtion>NYARUGENGE</OPtion>
+                     <OPtion>KICUKIRO</OPtion>
+                     <OPtion>GASABO</OPtion>
+                     <OPtion>NYARUGENGE</OPtion>
+                 </SElect><br>
+                 SECTOR: <br><SElect>
+                     <OPtion>NYARUGENGE</OPtion>
+                     <OPtion>KICUKIRO</OPtion>
+                     <OPtion>GASABO</OPtion>
+                     <OPtion>NYARUGENGE</OPtion>
+                 </SElect>
+                 <br>
+                 CELL: <br>
+                 <SElect>
+                     <OPtion>NYARUGENGE</OPtion>
+                     <OPtion>KICUKIRO</OPtion>
+                     <OPtion>GASABO</OPtion>
+                     <OPtion>NYARUGENGE</OPtion>
+                 </SElect>
+                 
+                 </div>
+                 <div class="col-6">
+                     <label for="photo">photo</label>
+                     <input class="input-group" type="text" name="image">
+                     <label for="idno">IdNo</label>
+                     <input class="input-group" type="text" name="idno">
+                     <label for="birthdate">birthdate</label>
+                     <input class="input-group" type="date" name="bdate">
+                     <label for="sex">sex</label>
+                     <input class="input-group" type="text" name="sex"> 
+                     <label for="assurance">martal status</label>
+                 <input class="input-group" type="text" name="assurance">
+                  
+                 </div>
+                 </form>
+                            </div> 
+                            
+                            <div class="reg parent col-4">
+                                 
+                             <form class="pform col-12" action="#">
+                                 <h1 id="par">PARENT</h1>
+                                 <div class="col-6">
+                                     <dl>
+                                         <dd  class="input-group"><p>name:</p><input type="text" name="fathername"></dd>
+                                         <dd  class="input-group"><p>phone:</p><input type="text" name="fatherphone"></dd>
+                                         <dd  class="input-group"><p>email:</p><input type="text" name="fatheremail"></dd>
+                                     </dl>
+                                 
+                                 
+                                 </div>
+                                 <div class="col-6">
+                                         <dl>
+                                                 <dd  class="input-group"><p>name:</p><input type="text" name="mathername"></dd>
+                                                 <dd  class="input-group"><p>phone:</p><input type="text" name="motherphone"></dd>
+                                                 <dd  class="input-group"><p>email:</p><input type="text" name="motheremail"></dd>
+                                             </dl>    
+                         </div> 
+                     </form>
+                 </div>
+                         <div class="reg exam col-4">
+                             <form class="eform" action="#">
+                             <h1 id="exam">exam</h1>
+                 <div class="col-4">
+                 <h1>exmNo</h1>
+                 <dl>
+                     <dt>NO1</dt>
+                     <dd><select name="eno1" id="eno1">
+                         <option value="HIV/AIDS">HIV/AIDS</option>
+                         <option value="DIABETES">DIABETES</option>
+                         <option value="MALARIA">MALARIA</option>
+                         <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                     </select></dd>
+                 </dl>
+                 <dl>
+                         <dt>NO2</dt>
+                         <dd><select name="eno1" id="eno1">
+                             <option value="HIV/AIDS">HIV/AIDS</option>
+                             <option value="DIABETES">DIABETES</option>
+                             <option value="MALARIA">MALARIA</option>
+                             <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                         </select></dd>
+                     </dl>
+                     <dl>
+                             <dt>NO3</dt>
+                             <dd><select name="eno1" id="eno1">
+                                 <option value="HIV/AIDS">HIV/AIDS</option>
+                                 <option value="DIABETES">DIABETES</option>
+                                 <option value="MALARIA">MALARIA</option>
+                                 <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                             </select></dd>
+                         </dl>
+                         <dl>
+                                 <dt>NO4</dt>
+                                 <dd><select name="eno1" id="eno1">
+                                     <option value="HIV/AIDS">HIV/AIDS</option>
+                                     <option value="DIABETES">DIABETES</option>
+                                     <option value="MALARIA">MALARIA</option>
+                                     <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                                 </select></dd>
+                             </dl>
+                 </div>
+                 <div class="col-4">
+                         <h1>P/N</h1>
+                         <dl>
+                             <dt>result</dt>
+                             <dd><select name="r1" id="r1">
+                                 <option value="">------</option>
+                                 <option value="POSITIVE">POSITIVE</option>
+                                 <option value="NEGATIVE">NEGATIVE</option>
+                                 
+                             </select></dd>
+                         </dl>
+                         <dl>
+                                 <dt>result</dt>
+                                 <dd><select name="r1" id="r1">
+                                     <option value="">------</option>
+                                     <option value="POSITIVE">POSITIVE</option>
+                                     <option value="NEGATIVE">NEGATIVE</option>
+                                     
+                                 </select></dd>
+                             </dl>
+                             <dl>
+                                     <dt>result</dt>
+                                     <dd><select name="r1" id="r1">
+                                         <option value="">------</option>
+                                         <option value="POSITIVE">POSITIVE</option>
+                                         <option value="NEGATIVE">NEGATIVE</option>
+                                         
+                                     </select></dd>
+                                 </dl>
+                                 <dl>
+                                         <dt>result</dt>
+                                         <dd><select name="r1" id="r1">
+                                             <option value="">------</option>
+                                             <option value="POSITIVE">POSITIVE</option>
+                                             <option value="NEGATIVE">NEGATIVE</option>
+                                             
+                                         </select></dd>
+                                     </dl>
+                 </div>
+                 <div class="col-4">
+                         <h1>COMMENT</h1>
+                         <dl>
+                             <dt>comment1</dt>
+                             <dd>
+                                 <textarea name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                             </dd>
+                         </dl>
+                         <dl>
+                                 <dt>comment2</dt>
+                                 <dd>
+                                     <textarea name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                                 </dd>
+                             </dl>
+                             <dl>
+                                     
+                             
+                 </div>
+                 </form>
+                 </div>
+                         </div> 
+                 
+                 <h1 id="submit"><button name="submit">RECORD</button>-<button type="button" 
+                 onclick="document.getElementById('id01').style.display='none'" 
+                 class="cancelbtn">Cancel</button></h1>
+            </div>
+             <!-- The Modal -->
+             <div id="id02" class="modal">
+                    <span onclick="document.getElementById('id02').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+                  
+                    <!-- Modal Content -->
+                    
+                          <div class="col-12">
+                                  <div class=" reg identification col-4">
+                       <form class="modal-content animate iform col-12" action="#">
+                       <h1 id="id">IDENTIFICATION</h1>
+                       <div class="col-6">
+                        <label for="sno">stdNo</label>
+                        <select name="s-update" id="s-update">
+                            <option value="">------</option>
+                            <option value="s-update">NTAMAKEMWA</option>
+                            <option value="s-update">NTAMAKEMWA</option>
+                            <option value="s-update">NTAMAKEMWA</option>
+                        </select>
+                         <label for="fname">firstname</label>
+                       <input class="input-group" type="text" name="fname"> 
+                       <label for="fname">firstname</label>
+                       <input class="input-group" type="text" name="fname">
+                       <label for="lname">lastname</label>
+                       <input class="input-group" type="text" name="lname">
+                       <label for="phone">phone</label>
+                       <input class="input-group" type="text" name="phone">
+                       <label for="email">email</label>
+                       <input class="input-group" type="email" name="email">
+                       <label for="status">martal status</label>
+                       <input class="input-group" type="text" name="status">
+                       <p style="text-align:center">LOCATION:</p> 
+                       <br>
+                       DISTRICT:  <SElect>
+                       
+                           <OPtion>NYARUGENGE</OPtion>
+                           <OPtion>KICUKIRO</OPtion>
+                           <OPtion>GASABO</OPtion>
+                           <OPtion>NYARUGENGE</OPtion>
+                       </SElect><br>
+                       SECTOR: <br><SElect>
+                           <OPtion>NYARUGENGE</OPtion>
+                           <OPtion>KICUKIRO</OPtion>
+                           <OPtion>GASABO</OPtion>
+                           <OPtion>NYARUGENGE</OPtion>
+                       </SElect>
+                       <br>
+                       CELL: <br>
+                       <SElect>
+                           <OPtion>NYARUGENGE</OPtion>
+                           <OPtion>KICUKIRO</OPtion>
+                           <OPtion>GASABO</OPtion>
+                           <OPtion>NYARUGENGE</OPtion>
+                       </SElect>
+                       
+                       </div>
+                       <div class="col-6">
+                           <label for="photo">photo</label>
+                           <input class="input-group" type="text" name="image">
+                           <label for="idno">IdNo</label>
+                           <input class="input-group" type="text" name="idno">
+                           <label for="birthdate">birthdate</label>
+                           <input class="input-group" type="date" name="bdate">
+                           <label for="sex">sex</label>
+                           <input class="input-group" type="text" name="sex"> 
+                           <label for="assurance">martal status</label>
+                       <input class="input-group" type="text" name="assurance">
+                        
+                       </div>
+                       </form>
+                                  </div> 
+                                  
+                                  <div class="reg parent col-4">
+                                       
+                                   <form class="pform col-12" action="#">
+                                       <h1 id="par">PARENT</h1>
+                                       <div class="col-6">
+                                           <dl>
+                                               <dd  class="input-group"><p>name:</p><input type="text" name="fathername"></dd>
+                                               <dd  class="input-group"><p>phone:</p><input type="text" name="fatherphone"></dd>
+                                               <dd  class="input-group"><p>email:</p><input type="text" name="fatheremail"></dd>
+                                           </dl>
+                                       
+                                       
+                                       </div>
+                                       <div class="col-6">
+                                               <dl>
+                                                       <dd  class="input-group"><p>name:</p><input type="text" name="mathername"></dd>
+                                                       <dd  class="input-group"><p>phone:</p><input type="text" name="motherphone"></dd>
+                                                       <dd  class="input-group"><p>email:</p><input type="text" name="motheremail"></dd>
+                                                   </dl>    
+                               </div> 
+                           </form>
+                       </div>
+                               <div class="reg exam col-4">
+                                   <form class="eform" action="#">
+                                   <h1 id="exam">exam</h1>
+                       <div class="col-4">
+                       <h1>exmNo</h1>
+                       <dl>
+                           <dt>NO1</dt>
+                           <dd><select name="eno1" id="eno1">
+                               <option value="HIV/AIDS">HIV/AIDS</option>
+                               <option value="DIABETES">DIABETES</option>
+                               <option value="MALARIA">MALARIA</option>
+                               <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                           </select></dd>
+                       </dl>
+                       <dl>
+                               <dt>NO2</dt>
+                               <dd><select name="eno1" id="eno1">
+                                   <option value="HIV/AIDS">HIV/AIDS</option>
+                                   <option value="DIABETES">DIABETES</option>
+                                   <option value="MALARIA">MALARIA</option>
+                                   <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                               </select></dd>
+                           </dl>
+                           <dl>
+                                   <dt>NO3</dt>
+                                   <dd><select name="eno1" id="eno1">
+                                       <option value="HIV/AIDS">HIV/AIDS</option>
+                                       <option value="DIABETES">DIABETES</option>
+                                       <option value="MALARIA">MALARIA</option>
+                                       <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                                   </select></dd>
+                               </dl>
+                               <dl>
+                                       <dt>NO4</dt>
+                                       <dd><select name="eno1" id="eno1">
+                                           <option value="HIV/AIDS">HIV/AIDS</option>
+                                           <option value="DIABETES">DIABETES</option>
+                                           <option value="MALARIA">MALARIA</option>
+                                           <option value="BLOOD PRESSURE">BLOOD PRESSURE</option>
+                                       </select></dd>
+                                   </dl>
+                       </div>
+                       <div class="col-4">
+                               <h1>P/N</h1>
+                               <dl>
+                                   <dt>result</dt>
+                                   <dd><select name="r1" id="r1">
+                                       <option value="">------</option>
+                                       <option value="POSITIVE">POSITIVE</option>
+                                       <option value="NEGATIVE">NEGATIVE</option>
+                                       
+                                   </select></dd>
+                               </dl>
+                               <dl>
+                                       <dt>result</dt>
+                                       <dd><select name="r1" id="r1">
+                                           <option value="">------</option>
+                                           <option value="POSITIVE">POSITIVE</option>
+                                           <option value="NEGATIVE">NEGATIVE</option>
+                                           
+                                       </select></dd>
+                                   </dl>
+                                   <dl>
+                                           <dt>result</dt>
+                                           <dd><select name="r1" id="r1">
+                                               <option value="">------</option>
+                                               <option value="POSITIVE">POSITIVE</option>
+                                               <option value="NEGATIVE">NEGATIVE</option>
+                                               
+                                           </select></dd>
+                                       </dl>
+                                       <dl>
+                                               <dt>result</dt>
+                                               <dd><select name="r1" id="r1">
+                                                   <option value="">------</option>
+                                                   <option value="POSITIVE">POSITIVE</option>
+                                                   <option value="NEGATIVE">NEGATIVE</option>
+                                                   
+                                               </select></dd>
+                                           </dl>
+                       </div>
+                       <div class="col-4">
+                               <h1>COMMENT</h1>
+                               <dl>
+                                   <dt>comment1</dt>
+                                   <dd>
+                                       <textarea name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                                   </dd>
+                               </dl>
+                               <dl>
+                                       <dt>comment2</dt>
+                                       <dd>
+                                           <textarea name="comment1" id="comment1" cols="10" rows="1"></textarea>
+                                       </dd>
+                                   </dl>
+                                   <dl>
+                                           
+                                   
+                       </div>
+                       </form>
+                       </div>
+                               </div> 
+                       
+                       <h1 id="submit"><button name="submit">UPDATE</button>-<button type="button" 
+                       onclick="document.getElementById('id02').style.display='none'" 
+                       class="cancelbtn">Cancel</button></h1>
+                  </div>
+                  
+                  <div id="mini" class="modal">
+                    <span onclick="document.getElementById('mini').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+                  
+                    <!-- Modal Content -->
+                    
+                          <div class="col-12 radio-group1 ">
+                       <form class="modal-content animate radio-group1 iform col-12" action="#">
+                           <h1>SPECIFY WHAT TYPE OF REPORT NEEDED</h1>
+                           QUESTION<input id="r1" class="radio-group" type="radio" name="radio-report" value="response" required>
+                           RESPONSE<input id="r2" class="radio-group" type="radio" name="radio-report" value="response" required>
+                            G-COMMENT<input id="r3" class="radio-group" type="radio" name="radio-report" value="g_question" required>
+                            <br>
+                           
+                           </form>
+                           
+                            <button id="get">getConnected</button> <button type="button" 
+                            onclick="document.getElementById('mini').style.display='none'" 
+                            class="cancelbtn">Cancel</button>
+                          </div>
+                  </div>
+                  <div id="comm" class="modal1">
+                        <span onclick="document.getElementById('comm').style.display='none'"
+                      class="close" title="Close Modal">&times;</span>
+                      
+                        <!-- Modal Content -->
+                        
+                              <div class="col-12 radio-group1 ">
+                           <form class="modal-content animate radio-group1 iform col-12" action="#">
+                               <textarea name="communication" id="comment" cols="60" rows="10" placeholder="type question here"></textarea>
+                                <button>SEND</button> <button type="button" 
+                                onclick="document.getElementById('comm').style.display='none'" 
+                                class="cancelbtn">Cancel</button>
+                              </div>
+                      </div>
+                  <div id="comm1" class="modal1">
+                    <span onclick="document.getElementById('comm1').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+                  
+                    <!-- Modal Content -->
+                    
+                          <div class="col-12 radio-group1 ">
+                       <form class="modal-content animate radio-group1 iform col-12" action="#">
+                           <textarea name="communication" id="comment" cols="60" rows="10" placeholder="type response here"></textarea>
+                            <button>SEND</button> <button type="button" 
+                            onclick="document.getElementById('comm1').style.display='none'" 
+                            class="cancelbtn">Cancel</button>
+                          </div>
+                  </div>
+                  <div id="comm2" class="modal1">
+                    <span onclick="document.getElementById('comm2').style.display='none'"
+                  class="close" title="Close Modal">&times;</span>
+                  
+                    <!-- Modal Content -->
+                    
+                          <div class="col-12 radio-group1 ">
+                       <form class="modal-content animate radio-group1 iform col-12" action="#">
+                           <textarea name="communication" id="comment" cols="60" rows="10" placeholder="type general comment here"></textarea>
+                            <button>SEND</button> <button type="button" 
+                            onclick="document.getElementById('comm2').style.display='none'" 
+                            class="cancelbtn">Cancel</button>
+                          </div>
+                  </div>
+                  
+            <div class="body">
+                
+    
+    <div class="col-12">
+        <div class="leftnav col-2">
+            <div class="lnav">
+                    <div class="col-2"><img src="../image/logo.PNG" alt=""></div>
+            </div>
+                <div class="btn-group">
+                        <dl class="dl"><dt><a href="#">student</a></dt>
+                        <dd class="dl-exam"><a onclick="document.getElementById('id01').style.display='block'" href="#">
+                            new</a></dd>
+                        <dd class="dl-exam"><a href="sample.html">student</a></dd>
+                        
+                        </dl>
+                        
+                        <dl class="dl1"><dt><a href="#">contact</a></dt>
+                            <dd class="dl-contact"><a onclick="document.getElementById('mini').style.display='block'" href="#">MINISANTE</a></dd>
+                            
+                            </dl>
+                            <dl class="dl2"><dt><a>report</a></dt>
+                                <dd class="dl-report"><a href="report.html">
+                                        general</button></a></dd>
+                                <dd class="dl-report"><a href="reports.html">specific</a></dd>
+
+                                </dl>
+                                <dl class="dl"><dt><a href="#">parent</a></dt> </dl>
+                                <dl class="dl"><dt><a href="#">emergency</a></dt> </dl>
+                                    
+                                   
+                        
+                      </div> 
+        </div>
+        <div class="bc">
+    
+    <nav class="col-8 navigation">
+       <nav>
+            <a class="hvr-underline-from-center" href="index.html">home</a>
+            <a class=" hvr-underline-from-center" href="#">services</a>
+            <a class=" hvr-underline-from-center" href="#">contact</a>
+            
+            
+            <a id="logout" class=" hvr-underline-from-center" href="#">logout</a>
+            
+            <script type="text/javascript">
+                document.getElementById("logout").onclick = function () {
+                    location.href = "../index.html";
+                };
+            </script>
+        </nav>
+     
+        <br>
+        <br>
+        <br>
+        <br>
+       
+            </div>
+        </div>
+        <div class="offer col-12">
+                <div class="service col-4">
+                        <h1>STUDENT HEALTH MIS</h1>
+                        <br>
+                        <p>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Reiciendis accusamus quasi inventore
+                               , laboriosam soluta nesciunt dolores. Quo saepe, pariatur
+                                nostrum nulla ipsam incidunt, placeat dolor, consequatur vero
+                                 molestiae vitae cupiditate.
+                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Reiciendis accusamus quasi inventore
+                               , laboriosam soluta nesciunt dolores. Quo saepe, pariatur
+                                nostrum nulla ipsam incidunt, placeat dolor, consequatur vero
+                                 molestiae vitae cupiditate.
+                        </p>
+                        <p><button class="">Get started</button></p>
+                       </div>
+                <div class=" service col-4">
+                        <h1>PARENT PORTAL</h1>
+                            <br>
+                            <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Reiciendis accusamus quasi inventore
+                                   , laboriosam soluta nesciunt dolores. Quo saepe, pariatur
+                                    nostrum nulla ipsam incidunt, placeat dolor, consequatur vero
+                                     molestiae vitae cupiditate.
+                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Reiciendis accusamus quasi inventore
+                                   , laboriosam soluta nesciunt dolores. Quo saepe, pariatur
+                                    nostrum nulla ipsam incidunt, placeat dolor, consequatur vero
+                                     molestiae vitae cupiditate.
+                            </p>
+                            <p><button class="">Get started</button></p>
+                           </div>
+                       <div class="service col-4">
+                            <h1>EMERGENCY RESPONSE</h1>
+                            <br>
+                            <p>
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Reiciendis accusamus quasi inventore
+                                   , laboriosam soluta nesciunt dolores. Quo saepe, pariatur
+                                    nostrum nulla ipsam incidunt, placeat dolor, consequatur vero
+                                     molestiae vitae cupiditate.
+                                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Reiciendis accusamus quasi inventore
+                                   , laboriosam soluta nesciunt dolores. Quo saepe, pariatur
+                                    nostrum nulla ipsam incidunt, placeat dolor, consequatur vero
+                                     molestiae vitae cupiditate.
+                            </p>
+                            <p><button class="">Get started</button></p>
+                           </div>
+    
+            </div>
+           
+                            
+                            <div class="foo col-12">
+                    <div class="col-4">
+                            <p><b>contact</b></p><br>
+                            <p><a href="#">senior managemennt details(contact details)</a></p>
+                            
+                            <p>tel:+250788475841</p>
+                            
+                            <p>mail:info@kuranga.com</p>
+                            
+                            <p>MINISANTE CALL CENTER:0000</p>
+                    </div>
+                    <div class="footer">
+                    <div class="col-4 footer1">
+                    
+                        </div>
+                        <div class="col-4 footer 2">
+                                <p><b>quick link</b></p><br>
+                                <ul>
+                                   <p><a href="#">feedback</a></P>
+                                    <p><a href="#">SHMIS</a></P>
+                                    <p><a href="#">EMERGENCY</a></P>
+                                    <p><a href="#">login</a></P>
+                                </ul>
+                                
+                                    </div>
+                                    <div class="col-4 footer3">
+                                            <p><b>social media and subscribe</b></p>
+                                            <br>
+                                            <ul>
+                                                <li><img src="../image/ff.png" alt=""></li>
+                                                <li><img src="../image/ft.png" alt=""></li>
+                                                <li><img src="../image/fl.png" alt=""></li>
+                                                <li><img src="../image/y.png" alt=""></li>
+                                            </ul>
+                                            <br>
+                                            
+                                            subscribe:
+                                            <br>
+                                            <br>
+                                            <input type="text" placeholder="enter email"><label id="label" for="input"><p><a href="#">subscribe</a></p></label>
+                                    </div>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            <div class="copy col-12">alright reserved</div>
+            </div>
+            <script>
+                document.getElementById('get').onclick=function(){
+                    var a = document.getElementById('r1').checked;
+                    var b = document.getElementById('r2').checked;
+                    var c = document.getElementById('r3').checked;
+                    
+                    if(b){
+                        document.getElementById('comm1').style.display='block'; 
+                        document.getElementById('mini').style.display='none';
+                    }
+                   else if(c){
+                        document.getElementById('comm2').style.display='block';
+                        document.getElementById('mini').style.display='none';
+                    }
+                    else{
+                        document.getElementById('comm').style.display='block';
+                        document.getElementById('mini').style.display='none';
+                    }
+                }
+                    // Get the modal
+                    var modal = document.getElementById('id01');
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                    var modal = document.getElementById('id02');
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                    var modal = document.getElementById('id03');
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                   
+                    </script> 
+    </body>
+</html>

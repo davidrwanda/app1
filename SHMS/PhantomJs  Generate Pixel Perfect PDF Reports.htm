@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>PhantomJs: Generate Pixel Perfect PDF Reports</title>
+	<meta name="description" content="" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/dependencies.css?v=6df3084ac3" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=6df3084ac3" />
+
+	<link rel="canonical" href="http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/amp/" />
+    
+    <meta property="og:site_name" content="Aboullaite Med" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="PhantomJs: Generate Pixel Perfect PDF Reports" />
+    <meta property="og:description" content="I&#x27;ve been working lately on a financial project that needs to implement a WYSIWYG reporting module. Which means the module offers to clients the possibility of building their own reports (charts, tables, text ...) and the generated pdf should be exactly the same, a pixel perfect clone of what they&#x27;ve built." />
+    <meta property="og:url" content="http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/" />
+    <meta property="article:published_time" content="2017-03-24T11:57:26.000Z" />
+    <meta property="article:modified_time" content="2017-03-24T12:49:38.000Z" />
+    <meta property="article:tag" content="Java" />
+    <meta property="article:tag" content="javascript" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PhantomJs: Generate Pixel Perfect PDF Reports" />
+    <meta name="twitter:description" content="I&#x27;ve been working lately on a financial project that needs to implement a WYSIWYG reporting module. Which means the module offers to clients the possibility of building their own reports (charts, tables, text ...) and the generated pdf should be exactly the same, a pixel perfect clone of what they&#x27;ve built." />
+    <meta name="twitter:url" content="http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Mohammed Aboullaite" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Java, javascript" />
+    <meta name="twitter:site" content="@laytoun" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Aboullaite Med",
+        "logo": "http://aboullaite.me/content/images/2016/11/myAvatar.svg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Mohammed Aboullaite",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/c954f76398c3e162576be66ef0e94d8d?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://aboullaite.me/author/mohammed/",
+        "sameAs": []
+    },
+    "headline": "PhantomJs: Generate Pixel Perfect PDF Reports",
+    "url": "http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/",
+    "datePublished": "2017-03-24T11:57:26.000Z",
+    "dateModified": "2017-03-24T12:49:38.000Z",
+    "keywords": "Java, javascript",
+    "description": "I&#x27;ve been working lately on a financial project that needs to implement a WYSIWYG reporting module. Which means the module offers to clients the possibility of building their own reports (charts, tables, text ...) and the generated pdf should be exactly the same, a pixel perfect clone of what they&#x27;ve built.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://aboullaite.me"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11" />
+    <link rel="alternate" type="application/rss+xml" title="Aboullaite Med" href="http://aboullaite.me/rss/" />
+</head>
+
+<body class="post-template tag-java tag-javascript">
+	<section id="wrapper">
+		<div id="ajax-container">
+			<nav id="nav" class="nav">
+				<div class="nav-logo">
+					<a href="http://aboullaite.me">
+						<img src="/content/images/2016/11/myAvatar.svg" alt="Logo" />
+						
+					</a>
+				</div>
+				<div class="nav-menu">
+					<a class="rss" href="http://aboullaite.me/rss/"><i class="icon-rss"></i></a>
+				</div>
+			</nav>			
+			
+
+<main class="content" role="main">
+	<article class="post tag-java tag-javascript">
+		<div class="inner">
+
+			<div id="push">
+
+			<header class="post-header">
+				<span class="post-meta">
+					<span class="post-author"><a href="/author/mohammed/">Mohammed Aboullaite</a></span> | <span class="post-date">24 Mar 2017 <span class="post-reading-time">| <span class="estimated-reading-time"></span> (<span class="word-count"></span> words)</span></span>
+				</span>
+				<div class="clear"></div>
+				<h1 class="post-title">PhantomJs: Generate Pixel Perfect PDF Reports</h1>
+			</header>
+		
+			<section class="post-content">
+				<p>I've been working lately on a financial project that needs to implement a WYSIWYG reporting module. Which means the module offers to clients the possibility of building their own reports (charts, tables, text ...) and the generated pdf should be exactly the same, a pixel perfect clone of what they've built.</p>
+
+<p>The project was java based, and traditional solutions will just not work. So we had 2 solutions: find out a quick alternative, or get ready to quit our job and become farmers.</p>
+
+<p>HTML/CSS can have many downsides, but the reality is that they are one of the easiest ways to programatically generate a document with any design we could think of.</p>
+
+<p>So We thought that if We wanted our reports to follow the branding of our web application, we should be rendering HTML/CSS to a PDF.</p>
+
+<p>This will even allow you to generate the PDF reports using your existing code, be it Angular/React… etc.</p>
+
+<h4 id="phantomjs">PhantomJs</h4>
+
+<p><a href="http://phantomjs.org/">PhantomJS</a> is a “headless” browser, that can render a web page just like Chrome, from the command line. And it can output the website as an image or pdf.</p>
+
+<p>You can actually run this from Java, NodeJS, Python, or whichever language that allows you to call an executable. In fact from NodeJS it would be even easier since PhantomJS runs in Node.</p>
+
+<p>Since We did this for a reporting system at work, that was built in Java, I’ll focus on that.</p>
+
+<p>You’ll need three things to generate a report:</p>
+
+<p>1- PhantomJS executable <br />
+2- JavaScript config file for PhantomJS <br />
+3- HTML file to convert into PDF  </p>
+
+<h4 id="installphantomjs">Install PhantomJS</h4>
+
+<p>Nothing much to say here, one command to run them all:</p>
+
+<pre><code>npm install phantomjs
+</code></pre>
+
+<h4 id="jsconfigfile">JS Config file</h4>
+
+<p>The following file is a basic config file, that will configure PhantomJS to generate a standard A4 PDF, in portrait mode.</p>
+
+<p>It will take the HTML content and the PDF output file from the CLI arguments.</p>
+
+<pre><code>    var page = require('webpage').create(),
+        system = require('system'),
+        fs = require('fs');
+
+    page.paperSize = {
+        format: 'A4',
+        orientation: 'portrait',
+        margin: {
+            top: "1.5cm",
+            bottom: "1cm"
+        },
+        footer: {
+            height: "1cm",
+            contents: phantom.callback(function (pageNum, numPages) {
+                return '' +
+                    '&lt;div style="margin: 0 1cm 0 1cm; font-size: 0.65em"&gt;' +
+                    '   &lt;div style="color: #888; padding:20px 20px 0 10px; border-top: 1px solid #ccc;"&gt;' +
+                    '       &lt;span&gt;REPORT FOOTER&lt;/span&gt; ' +
+                    '       &lt;span style="float:right"&gt;' + pageNum + ' / ' + numPages + '&lt;/span&gt;' +
+                    '   &lt;/div&gt;' +
+                    '&lt;/div&gt;';
+            })
+        }
+    };
+
+    // This will fix some things that I'll talk about in a second
+    page.settings.dpi = "96";
+
+    page.content = fs.read(system.args[1]);
+
+    var output = system.args[2];
+
+    window.setTimeout(function () {
+        page.render(output, {format: 'pdf'});
+        phantom.exit(0);
+    }, 2000);
+</code></pre>
+
+<h4 id="htmlfile">HTML File</h4>
+
+<p>Any file, with any contents will work just fine. To load local resources you can just use the <code>file://</code> protocol.</p>
+
+<pre><code>    &lt;!DOCTYPE html&gt;
+
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;The title is irrelevant&lt;/title&gt;
+        &lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+        &lt;style type="text/css" media="all"&gt;
+            html {
+                margin:0;
+                zoom: 1; 
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+      &lt;h1&gt;Sample report&lt;/h1&gt;
+      &lt;p&gt;Oh Look! It's Working&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+
+<h4 id="executing">Executing</h4>
+
+<p>If running this from the command line, just make sure you have NodeJS and PhantomJS installed (duh… ), then run:</p>
+
+<pre><code> phantomjs configFile.js htmlFile.html output.pdf
+</code></pre>
+
+<p>If you wanted to run this programatically from Java for example, you could use:</p>
+
+<pre><code>  // Get HTML Report
+  URL htmlFileUrl = this.getClass().getResource("htmlFile.html");
+  File htmlFile = Paths.get(htmlFileUrl.toURI()).toFile();
+
+  // Get JS config file
+  URL configFileUrl = this.getClass().getResource("configFile.js");
+  File configFile = Paths.get(configFileUrl.toURI()).toFile();
+
+  // tmp pdf file for output
+  File pdfReport = File.createTempFile("report", ".pdf");
+
+  ProcessBuilder renderProcess = new ProcessBuilder(
+          "/path/to/phantomjs",
+          configFile.getAbsolutePath(),
+          htmlFile.getAbsolutePath(),
+          pdfReport.getAbsolutePath()
+  );
+
+  Process phantom = renderProcess.start();
+
+  // you need to read phantom.getInputStream() and phantom.getErrorStream()
+  // otherwise if they output something the process won't end
+
+  int exitCode = phantom.waitFor();
+
+  if(exitCode != 0){
+      // report generation failed
+  }
+
+  // success!
+</code></pre>
+
+<p>The coolest thing? If you can render it in HTML, you can render it in your report!</p>
+
+<p>This means that now you can almost directly copy/paste from your application, you can even use AngularJS/React to generate the content… The possibilities are endless.</p>
+
+<p>Well, let's end this post by this image that highlight a report we were able to generate using phantomJS ;) <br />
+<img src="/content/images/2017/03/blog.JPG" alt="" /></p>
+			</section>
+			
+			<footer class="post-footer">
+				<div class="post-tags">
+					<a href="/tag/java/">Java</a> <a href="/tag/javascript/">javascript</a>
+				</div>
+				<div class="post-share">
+					<a class="icon-twitter" href="https://twitter.com/share?text=PhantomJs: Generate Pixel Perfect PDF Reports&url=http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+						<span>Twitter</span>
+					</a>
+					<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+						<span>Facebook</span>
+					</a>
+					<a class="icon-gplus" href="https://plus.google.com/share?url=http://aboullaite.me/phantomjs-generate-pixel-perfect-pdf-reports/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+						<span>Google+</span>
+					</a>
+				</div>
+			</footer>
+			
+			<aside class="post-comments">
+				<div id="disqus_thread"></div>
+			</aside>
+			
+			</div>
+			
+			<nav class="post-nav">
+					<a class="post-nav-item post-nav-next" href="http://aboullaite.me/java-9-process-api-got-a-new-boost/">
+						<section class="post-nav-teaser">
+							<span class="post-nav-icon"><i class="icon-arrow-left"></i></span>
+							<span class="post-nav-info">
+								<h4 class="post-nav-title">Java 9: Process API got a new boost!</h4>
+								<p class="post-nav-excerpt">Remember This hack :  Integer.parseInt(ManagementFactory.getRuntimeMXBean().getName().split("@")[0]);   ?! This is&hellip;</p>
+							</span>
+						</section>
+					</a>
+					<a class="post-nav-item post-nav-prev" href="http://aboullaite.me/java-9-new-features-reactive-streams/">
+						<section class="post-nav-teaser">
+							<span class="post-nav-icon"><i class="icon-arrow-right"></i></span>
+							<span class="post-nav-info">
+								<h4 class="post-nav-title">Java 9 new Features: Reactive Streams</h4>
+								<p class="post-nav-excerpt">Java 9 is set to release in July 2017, and it will&hellip;</p>
+							</span>
+						</section>
+					</a>
+				<div class="clear"></div>
+			</nav>
+
+		</div>
+	</article>
+</main>
+
+			<div id="body-class" style="display: none;" class="post-template tag-java tag-javascript"></div>
+			<footer id="footer">
+				<section class="credits">
+					<span class="credits-theme">Theme <a href="https://github.com/zutrinken/bleak" target="_blank" rel="nofollow">Bleak</a> by <a href="http://zutrinken.com" target="_blank" rel="nofollow">zutrinken</a></span>
+					<span class="credits-software">Published with <a href="http://ghost.org" target="_blank" rel="nofollow">Ghost</a></span>
+				</section>
+			</footer>
+		</div>
+	</section>
+	<script>var disqus="aboullait";</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88656685-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+	<script type="text/javascript" src="/assets/js/dependencies.js?v=6df3084ac3"></script>
+	<script type="text/javascript" src="/assets/js/script.js?v=6df3084ac3"></script>
+</body>
+</html>

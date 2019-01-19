@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <title>SHMIS | REPORT</title>
+        <style>
+        th{
+            width: 300px;
+        }
+        .table{
+            size: 80%;
+            overflow: auto;
+        }
+        .modal {
+        display: block; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 85%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+        margin: 60px;
+        margin-left: 80px;
+        margin-right: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    .modal1 {
+        display: block; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 40%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+        margin: 60px;
+        margin-left: 350px;
+        margin-right: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5px auto; /* 15% from the top and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        text-align: center;
+    }
+    
+    /* The Close Button */
+    .close {
+        /* Position it in the top right corner outside of the modal */
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    /* Close button on hover */
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)}
+        to {-webkit-transform: scale(1)}
+    }
+    
+    @keyframes animatezoom {
+        from {transform: scale(0)}
+        to {transform: scale(1)}
+    }
+    .radio-group1{
+       
+        text-align: center;
+        font-size: larger;
+    }
+   
+                
+        </style>
+        <link href="../css/animate.css" rel="stylesheet">
+        <link href="../css/hover.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link href="../css/animsition.min.css" rel="stylesheet">
+        <link href="../css/loader.css" rel="stylesheet">
+        <script src="../css/WOW/dist/wow.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/animsition.min.js"></script>
+        <script src="../scripts/js.js"></script>
+    </head>
+    <body>
+            <div class="body">
+                
+    
+                    <div class="col-12">
+                        <div class="leftnav-info col-2">
+                            <div class="lnav">
+                                    <div class="col-2"><img src="../image/logo.PNG" alt=""></div>
+                            </div>
+                                
+                        </div>
+                        <div class="bc-info">
+                    
+                    <nav class="col-8 navigation">
+                       <nav>
+                            <a class="hvr-underline-from-center" href="index.html">home</a>
+                            <a class=" hvr-underline-from-center" href="#">services</a>
+                            <a class=" hvr-underline-from-center" href="#">contact</a>
+                            
+                            
+                            <a class=" hvr-underline-from-center" href="#">logout</a>
+                            
+                            
+                        </nav>
+                     
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                       
+                            </div>
+        <div class="table">
+        <table width="500px"  class="col-12 table">
+            <tr class="th">
+                <th>photo</th><th>idno</th><th>name</th><th>phone</th><th>email</th>
+                <th>LOCATION</th><th>bdate</th><th>sex</th>
+                <th>exno1</th><th>EXNO2</th><th>EXNO3</th><th>EXNO4</th><th>COMMENT1</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td><td></td><td></td>
+                <td></td><td></td><td></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div id="id03" class="modal">
+        <span onclick="document.getElementById('id03').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+      
+        <!-- Modal Content -->
+        
+              <div class="col-12 radio-group1 ">
+           <form class="modal-content animate radio-group1 iform col-12" action="#">
+               <h1>SPECIFY WHAT TYPE OF REPORT NEEDED</h1>
+                         PERIOD <br>
+                         <br>
+              specific DAY: <input type="date" placeholder="day"><br><br><br>
+
+              period: <input type="date"placeholder="from"> - <input type="date" placeholder="to"><br><br>
+                 EXAM <br><br>
+             type exam :<input type="text" value="exam name"> <br>
+            
+             <br>
+                <br>
+               
+               </form>
+             
+               <button>getReport</button>
+               <button type="button" 
+                onclick="document.getElementById('id03').style.display='none'" 
+                class="cancelbtn">Cancel</button>
+                <br><br><br><br><br>-
+              </div>
+      </div>
+    </body>
+</html>
